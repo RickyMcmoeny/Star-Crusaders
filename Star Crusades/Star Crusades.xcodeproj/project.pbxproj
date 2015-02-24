@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55564CCD1A9BA3B800DBB29F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55564CCC1A9BA3B800DBB29F /* main.m */; };
+		55564CD01A9BA3B800DBB29F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55564CCF1A9BA3B800DBB29F /* AppDelegate.m */; };
+		55564CD21A9BA3B800DBB29F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 55564CD11A9BA3B800DBB29F /* art.scnassets */; };
+		55564CD51A9BA3B800DBB29F /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55564CD41A9BA3B800DBB29F /* GameViewController.m */; };
+		55564CD81A9BA3B800DBB29F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55564CD61A9BA3B800DBB29F /* Main.storyboard */; };
+		55564CDA1A9BA3B800DBB29F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55564CD91A9BA3B800DBB29F /* Images.xcassets */; };
+		55564CDD1A9BA3B800DBB29F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55564CDB1A9BA3B800DBB29F /* LaunchScreen.xib */; };
+		55564CE91A9BA3B800DBB29F /* Star_CrusadesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55564CE81A9BA3B800DBB29F /* Star_CrusadesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55564CE31A9BA3B800DBB29F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55564CBF1A9BA3B800DBB29F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55564CC61A9BA3B800DBB29F;
+			remoteInfo = "Star Crusades";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55564CC71A9BA3B800DBB29F /* Star Crusades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Crusades.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55564CCB1A9BA3B800DBB29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55564CCC1A9BA3B800DBB29F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55564CCE1A9BA3B800DBB29F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55564CCF1A9BA3B800DBB29F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55564CD11A9BA3B800DBB29F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		55564CD31A9BA3B800DBB29F /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		55564CD41A9BA3B800DBB29F /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		55564CD71A9BA3B800DBB29F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55564CD91A9BA3B800DBB29F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55564CDC1A9BA3B800DBB29F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		55564CE21A9BA3B800DBB29F /* Star CrusadesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Star CrusadesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55564CE71A9BA3B800DBB29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55564CE81A9BA3B800DBB29F /* Star_CrusadesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Star_CrusadesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55564CC41A9BA3B800DBB29F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55564CDF1A9BA3B800DBB29F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55564CBE1A9BA3B800DBB29F = {
+			isa = PBXGroup;
+			children = (
+				55564CC91A9BA3B800DBB29F /* Star Crusades */,
+				55564CE51A9BA3B800DBB29F /* Star CrusadesTests */,
+				55564CC81A9BA3B800DBB29F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55564CC81A9BA3B800DBB29F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55564CC71A9BA3B800DBB29F /* Star Crusades.app */,
+				55564CE21A9BA3B800DBB29F /* Star CrusadesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55564CC91A9BA3B800DBB29F /* Star Crusades */ = {
+			isa = PBXGroup;
+			children = (
+				55564CCE1A9BA3B800DBB29F /* AppDelegate.h */,
+				55564CCF1A9BA3B800DBB29F /* AppDelegate.m */,
+				55564CD11A9BA3B800DBB29F /* art.scnassets */,
+				55564CD31A9BA3B800DBB29F /* GameViewController.h */,
+				55564CD41A9BA3B800DBB29F /* GameViewController.m */,
+				55564CD61A9BA3B800DBB29F /* Main.storyboard */,
+				55564CD91A9BA3B800DBB29F /* Images.xcassets */,
+				55564CDB1A9BA3B800DBB29F /* LaunchScreen.xib */,
+				55564CCA1A9BA3B800DBB29F /* Supporting Files */,
+			);
+			path = "Star Crusades";
+			sourceTree = "<group>";
+		};
+		55564CCA1A9BA3B800DBB29F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55564CCB1A9BA3B800DBB29F /* Info.plist */,
+				55564CCC1A9BA3B800DBB29F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55564CE51A9BA3B800DBB29F /* Star CrusadesTests */ = {
+			isa = PBXGroup;
+			children = (
+				55564CE81A9BA3B800DBB29F /* Star_CrusadesTests.m */,
+				55564CE61A9BA3B800DBB29F /* Supporting Files */,
+			);
+			path = "Star CrusadesTests";
+			sourceTree = "<group>";
+		};
+		55564CE61A9BA3B800DBB29F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55564CE71A9BA3B800DBB29F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55564CC61A9BA3B800DBB29F /* Star Crusades */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55564CEC1A9BA3B800DBB29F /* Build configuration list for PBXNativeTarget "Star Crusades" */;
+			buildPhases = (
+				55564CC31A9BA3B800DBB29F /* Sources */,
+				55564CC41A9BA3B800DBB29F /* Frameworks */,
+				55564CC51A9BA3B800DBB29F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Star Crusades";
+			productName = "Star Crusades";
+			productReference = 55564CC71A9BA3B800DBB29F /* Star Crusades.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55564CE11A9BA3B800DBB29F /* Star CrusadesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55564CEF1A9BA3B800DBB29F /* Build configuration list for PBXNativeTarget "Star CrusadesTests" */;
+			buildPhases = (
+				55564CDE1A9BA3B800DBB29F /* Sources */,
+				55564CDF1A9BA3B800DBB29F /* Frameworks */,
+				55564CE01A9BA3B800DBB29F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55564CE41A9BA3B800DBB29F /* PBXTargetDependency */,
+			);
+			name = "Star CrusadesTests";
+			productName = "Star CrusadesTests";
+			productReference = 55564CE21A9BA3B800DBB29F /* Star CrusadesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55564CBF1A9BA3B800DBB29F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Honest Abe Games";
+				TargetAttributes = {
+					55564CC61A9BA3B800DBB29F = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					55564CE11A9BA3B800DBB29F = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 55564CC61A9BA3B800DBB29F;
+					};
+				};
+			};
+			buildConfigurationList = 55564CC21A9BA3B800DBB29F /* Build configuration list for PBXProject "Star Crusades" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55564CBE1A9BA3B800DBB29F;
+			productRefGroup = 55564CC81A9BA3B800DBB29F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55564CC61A9BA3B800DBB29F /* Star Crusades */,
+				55564CE11A9BA3B800DBB29F /* Star CrusadesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55564CC51A9BA3B800DBB29F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55564CDD1A9BA3B800DBB29F /* LaunchScreen.xib in Resources */,
+				55564CDA1A9BA3B800DBB29F /* Images.xcassets in Resources */,
+				55564CD21A9BA3B800DBB29F /* art.scnassets in Resources */,
+				55564CD81A9BA3B800DBB29F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55564CE01A9BA3B800DBB29F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55564CC31A9BA3B800DBB29F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55564CD01A9BA3B800DBB29F /* AppDelegate.m in Sources */,
+				55564CD51A9BA3B800DBB29F /* GameViewController.m in Sources */,
+				55564CCD1A9BA3B800DBB29F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55564CDE1A9BA3B800DBB29F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55564CE91A9BA3B800DBB29F /* Star_CrusadesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55564CE41A9BA3B800DBB29F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55564CC61A9BA3B800DBB29F /* Star Crusades */;
+			targetProxy = 55564CE31A9BA3B800DBB29F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55564CD61A9BA3B800DBB29F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55564CD71A9BA3B800DBB29F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55564CDB1A9BA3B800DBB29F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55564CDC1A9BA3B800DBB29F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55564CEA1A9BA3B800DBB29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		55564CEB1A9BA3B800DBB29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55564CED1A9BA3B800DBB29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Star Crusades/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		55564CEE1A9BA3B800DBB29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Star Crusades/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		55564CF01A9BA3B800DBB29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Star CrusadesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Star Crusades.app/Star Crusades";
+			};
+			name = Debug;
+		};
+		55564CF11A9BA3B800DBB29F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Star CrusadesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Star Crusades.app/Star Crusades";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55564CC21A9BA3B800DBB29F /* Build configuration list for PBXProject "Star Crusades" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55564CEA1A9BA3B800DBB29F /* Debug */,
+				55564CEB1A9BA3B800DBB29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55564CEC1A9BA3B800DBB29F /* Build configuration list for PBXNativeTarget "Star Crusades" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55564CED1A9BA3B800DBB29F /* Debug */,
+				55564CEE1A9BA3B800DBB29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55564CEF1A9BA3B800DBB29F /* Build configuration list for PBXNativeTarget "Star CrusadesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55564CF01A9BA3B800DBB29F /* Debug */,
+				55564CF11A9BA3B800DBB29F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55564CBF1A9BA3B800DBB29F /* Project object */;
+}
