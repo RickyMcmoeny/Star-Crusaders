@@ -12,6 +12,8 @@
 
 @property CGPoint *shipPosition;
 
+@property SKSpriteNode *sprite;
+
 
 
 @end
