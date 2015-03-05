@@ -11,12 +11,14 @@
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 
+
 @property CGPoint *shipPosition;
 
 @property SKSpriteNode *sprite;
 
 @property SKSpriteNode *enemy;
 
+@property SKSpriteNode *background;
 
 @property SKNode *lazers;
 

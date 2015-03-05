@@ -10,8 +10,15 @@
 #import "enemy.h"
 
 @implementation GameScene
+{
+    NSTimeInterval _lastUpdateTime;
+    NSTimeInterval _dt;
+    CGPoint _velocity;
+}
 static const int enemyHitCategory = 1;
 static const int lazerHitCategory = 2;
+
+
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
@@ -22,8 +29,10 @@ static const int lazerHitCategory = 2;
 
    
     self.sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-    self.enemy = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-
+    self.enemy = [SKSpriteNode spriteNodeWithImageNamed:@"enemy1"];
+    self.background = [SKSpriteNode spriteNodeWithImageNamed:@"background"];
+    [self addChild:self.background];
+    
     self.lazers = [SKSpriteNode spriteNodeWithImageNamed:@"lazer"];
 
     
@@ -53,7 +62,7 @@ static const int lazerHitCategory = 2;
 
     
     [self.enemy runAction: keepMovingDown];
-    [self.enemy runAction: keepRotating];
+    //[self.enemy runAction: keepRotating];
 
 
     
@@ -69,6 +78,9 @@ static const int lazerHitCategory = 2;
     [self addChild:self.sprite];
     
     self.timer = 300;
+    
+    
+    
     
 }
      
@@ -115,7 +127,7 @@ static const int lazerHitCategory = 2;
            [self addChild: laze];
            
            [laze runAction: keepMoving];
-           [laze runAction: keepRotating];
+           //[laze runAction: keepRotating];
 
            
 
