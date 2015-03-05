@@ -43,13 +43,18 @@ static const int lazerHitCategory = 2;
     self.enemy.zRotation = M_PI/1.0;
     [self addChild:self.enemy];
     
-    SKAction *moveNodeDown = [SKAction moveByX:0.0 y:-1 duration:1];
+    SKAction *oneRevolution = [SKAction rotateByAngle:-M_PI*2 duration: 0.1];
+    SKAction *keepRotating = [SKAction repeatActionForever: oneRevolution];
+
+    
+    SKAction *moveNodeDown = [SKAction moveByX:0.0 y:-10 duration:1];
     SKAction *keepMovingDown = [SKAction repeatActionForever: moveNodeDown];
     
 
     
     [self.enemy runAction: keepMovingDown];
-    
+    [self.enemy runAction: keepRotating];
+
 
     
     CGPoint location = CGPointMake(525,40);
@@ -102,10 +107,16 @@ static const int lazerHitCategory = 2;
            laze.position = newLocation;
            SKAction *moveNodeUp = [SKAction moveByX:0.0 y:250 duration:1];
            SKAction *keepMoving = [SKAction repeatActionForever: moveNodeUp];
+           
+           SKAction *oneRevolution = [SKAction rotateByAngle:-M_PI*2 duration: 0.5];
+           SKAction *keepRotating = [SKAction repeatActionForever: oneRevolution];
+
 
            [self addChild: laze];
            
            [laze runAction: keepMoving];
+           [laze runAction: keepRotating];
+
            
 
 

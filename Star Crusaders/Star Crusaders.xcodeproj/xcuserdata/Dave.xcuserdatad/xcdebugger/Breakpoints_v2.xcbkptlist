@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Star Crusaders/GameScene.m"
-            timestampString = "447206645.687679"
+            timestampString = "447266795.041185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-didMoveToView:"
             landmarkType = "5">
          </BreakpointContent>
