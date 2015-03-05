@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5512F24E1AA0E9AC00DFA391 /* enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5512F24D1AA0E9AC00DFA391 /* enemy.m */; };
+		5512F2521AA4EE4600DFA391 /* lazer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5512F2511AA4EE4600DFA391 /* lazer.m */; };
 		55564C961A9BA37400DBB29F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55564C951A9BA37400DBB29F /* main.m */; };
 		55564C991A9BA37400DBB29F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55564C981A9BA37400DBB29F /* AppDelegate.m */; };
 		55564C9C1A9BA37500DBB29F /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 55564C9B1A9BA37500DBB29F /* GameScene.m */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		5512F24C1AA0E97500DFA391 /* enemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enemy.h; sourceTree = "<group>"; };
 		5512F24D1AA0E9AC00DFA391 /* enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = enemy.m; sourceTree = "<group>"; };
+		5512F2511AA4EE4600DFA391 /* lazer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lazer.m; sourceTree = "<group>"; };
+		5512F2531AA4EE6000DFA391 /* lazer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lazer.h; sourceTree = "<group>"; };
 		55564C901A9BA37400DBB29F /* Star Crusaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Crusaders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55564C941A9BA37400DBB29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55564C951A9BA37400DBB29F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 			children = (
 				55564C971A9BA37400DBB29F /* AppDelegate.h */,
 				55564C981A9BA37400DBB29F /* AppDelegate.m */,
+				5512F2531AA4EE6000DFA391 /* lazer.h */,
+				5512F2511AA4EE4600DFA391 /* lazer.m */,
 				5512F24C1AA0E97500DFA391 /* enemy.h */,
 				5512F24D1AA0E9AC00DFA391 /* enemy.m */,
 				55564C9A1A9BA37400DBB29F /* GameScene.h */,
@@ -233,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5512F2521AA4EE4600DFA391 /* lazer.m in Sources */,
 				55564CA11A9BA37500DBB29F /* GameViewController.m in Sources */,
 				55564C991A9BA37400DBB29F /* AppDelegate.m in Sources */,
 				55564C9C1A9BA37500DBB29F /* GameScene.m in Sources */,

@@ -9,15 +9,21 @@
 #import <SpriteKit/SpriteKit.h>
 #import <CoreMotion/CoreMotion.h>
 
-@interface GameScene : SKScene
+@interface GameScene : SKScene <SKPhysicsContactDelegate>
 
 @property CGPoint *shipPosition;
 
 @property SKSpriteNode *sprite;
 
-@property SKSpriteNode *lazer;
+@property SKSpriteNode *enemy;
 
-//@property NSMutableArray
+
+@property SKNode *lazers;
+
+@property int *timer;
+
+//@property (strong, nonatomic) NSMutableArray *lazers;
+
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
