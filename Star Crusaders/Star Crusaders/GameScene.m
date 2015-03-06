@@ -14,6 +14,8 @@
     NSTimeInterval _lastUpdateTime;
     NSTimeInterval _dt;
     CGPoint _velocity;
+    CGPoint _backgroundpoint;
+
 }
 static const int enemyHitCategory = 1;
 static const int lazerHitCategory = 2;
@@ -31,7 +33,15 @@ static const int lazerHitCategory = 2;
     self.sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
     self.enemy = [SKSpriteNode spriteNodeWithImageNamed:@"enemy1"];
     self.background = [SKSpriteNode spriteNodeWithImageNamed:@"background"];
+    
+    _backgroundpoint = CGPointMake(525, 0);
+    self.background.position = _backgroundpoint;
+    
+    SKAction *backgroundScroll = [SKAction moveByX:0.0 y:-10 duration:1];
+    SKAction *keepScrolling = [SKAction repeatActionForever: backgroundScroll];
+    
     [self addChild:self.background];
+    [self.background runAction:keepScrolling];
     
     self.lazers = [SKSpriteNode spriteNodeWithImageNamed:@"lazer"];
 
@@ -88,7 +98,7 @@ static const int lazerHitCategory = 2;
 
 
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
     
@@ -167,6 +177,7 @@ static const int lazerHitCategory = 2;
     if (self.timer <= 0) {
         NSLog(@"Spawn Enemy");
         self.timer = 500;
+        _backgroundpoint.y = 0;
     }
     else
     {

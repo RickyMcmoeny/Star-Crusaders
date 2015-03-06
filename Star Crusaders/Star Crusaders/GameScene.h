@@ -20,7 +20,10 @@
 
 @property SKSpriteNode *background;
 
+@property CGPoint *backgroundlocation;
+
 @property SKNode *lazers;
+
 
 @property int *timer;
 
