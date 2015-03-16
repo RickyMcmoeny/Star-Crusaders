@@ -9,18 +9,20 @@
 #import <Foundation/Foundation.h>
 
 #import "enemy.h"
+#include <stdlib.h>
 
 @implementation Enemy
 
-- (void)sayHello { //this can be called when the object is made
-    NSLog(@"Hello, World!");
-    NSLog(@"I was born: ");
-    NSLog(@"%d",self.yearOfBirth);
+
+-(void)changeDirection{
+    int r = arc4random() % 2;
+    self.direction = r; // 0: straight, 1: left, 2: right
 }
 
-
--(void)setInteger : (int) year {
-    self.yearOfBirth = year;
+-(void)changeStage{
+    if (self.stage == 0) {
+        self.stage = 1;
+    }
 }
 
 

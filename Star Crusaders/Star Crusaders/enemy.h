@@ -10,12 +10,23 @@
 #define Star_Crusaders_enemy_h
 
 @interface Enemy : NSObject
-- (void)sayHello;
-- (void)setInteger:(int)year;
+//- (void)setStage:(int)stage;
+- (void)changeDirection;
+- (void)changeStage;
 
-@property (readonly) NSString *firstName; //variables that can be set
-@property (readonly) NSString *lastName;
-@property int yearOfBirth;
+
+
+@property NSString *name; //variables that can be set
+@property (nonatomic) int stage;
+
+//stage = 0: standby
+//stage = 1: attack
+
+@property (nonatomic) int direction;
+
+//direction = 0: straight
+//direction = 1: left
+//direction = 2: right
 
 
 

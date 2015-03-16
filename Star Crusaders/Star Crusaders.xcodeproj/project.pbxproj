@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B234161AB68E6A001CFE5E /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B234151AB68E6A001CFE5E /* explosion.png */; };
 		5512F24E1AA0E9AC00DFA391 /* enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5512F24D1AA0E9AC00DFA391 /* enemy.m */; };
 		5512F2521AA4EE4600DFA391 /* lazer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5512F2511AA4EE4600DFA391 /* lazer.m */; };
 		55564C961A9BA37400DBB29F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55564C951A9BA37400DBB29F /* main.m */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13B234151AB68E6A001CFE5E /* explosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = explosion.png; path = ../../../Desktop/explosion.png; sourceTree = "<group>"; };
 		5512F24C1AA0E97500DFA391 /* enemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enemy.h; sourceTree = "<group>"; };
 		5512F24D1AA0E9AC00DFA391 /* enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = enemy.m; sourceTree = "<group>"; };
 		5512F2511AA4EE4600DFA391 /* lazer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lazer.m; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				55564CA01A9BA37500DBB29F /* GameViewController.m */,
 				55564CA21A9BA37500DBB29F /* Main.storyboard */,
 				55564CA51A9BA37500DBB29F /* Images.xcassets */,
+				13B234151AB68E6A001CFE5E /* explosion.png */,
 				55564CA71A9BA37500DBB29F /* LaunchScreen.xib */,
 				55564C931A9BA37400DBB29F /* Supporting Files */,
 			);
@@ -186,6 +189,7 @@
 				TargetAttributes = {
 					55564C8F1A9BA37400DBB29F = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = AB2F4F4EYD;
 					};
 					55564CAD1A9BA37500DBB29F = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -221,6 +225,7 @@
 				55564CA61A9BA37500DBB29F /* Images.xcassets in Resources */,
 				55564C9E1A9BA37500DBB29F /* GameScene.sks in Resources */,
 				55564CA41A9BA37500DBB29F /* Main.storyboard in Resources */,
+				13B234161AB68E6A001CFE5E /* explosion.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,9 +370,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Star Crusaders/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -375,9 +384,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Star Crusaders/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
