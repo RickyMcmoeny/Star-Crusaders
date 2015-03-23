@@ -21,7 +21,9 @@
 
 }
 static const int enemyHitCategory = 1;
+static const int enemyLazerHitCategory = 3;
 static const int lazerHitCategory = 2;
+static const int PlayerHitCategory = 4;
 
 
 
@@ -90,9 +92,27 @@ static const int lazerHitCategory = 2;
         
     }
     
-    
-    
     [self createShootingEnemy:720 withX:525];
+    
+    SKSpriteNode *enemyLaze = [SKSpriteNode spriteNodeWithImageNamed:@"lazer"];
+    enemyLaze.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(20, 80)];
+    enemyLaze.physicsBody.affectedByGravity = false;
+    enemyLaze.physicsBody.categoryBitMask = enemyLazerHitCategory;
+    enemyLaze.physicsBody.contactTestBitMask = enemyHitCategory;
+    enemyLaze.physicsBody.collisionBitMask =  enemyHitCategory;
+    
+    enemyLaze.name = @"Laser";
+    enemyLaze.position = [self childNodeWithName: @"shootingEnemy0"].position;
+    SKAction *moveNodeDown = [SKAction moveByX:0.0 y:-250 duration:1];
+    SKAction *keepMoving = [SKAction repeatActionForever: moveNodeDown];
+    
+    
+    
+    [self addChild: enemyLaze];
+    
+    [enemyLaze runAction: keepMoving];
+    
+    
     
     
 
@@ -149,9 +169,6 @@ static const int lazerHitCategory = 2;
 
 -(void)createShootingEnemy: (int) posy withX : (int) posx{
     
-    BOOL *firstTime;
-
-    firstTime = true;
     
     Enemy *spaceyOK = [[Enemy alloc] init]; //initalize the class object
     NSString *name = @"shootingEnemy";
@@ -181,8 +198,8 @@ static const int lazerHitCategory = 2;
     
     SKAction *strafeLeftOnce = [SKAction moveByX:-252.5 y:0 duration:2];
     
-    SKAction *strafeRight = [SKAction moveByX:515 y:0 duration:4];
-    SKAction *strafeLeft = [SKAction moveByX:-515 y:0 duration:4];
+    SKAction *strafeRight = [SKAction moveByX:450 y:0 duration:4];
+    SKAction *strafeLeft = [SKAction moveByX:-450 y:0 duration:4];
     SKAction *strafy = [SKAction sequence:@[strafeRight, strafeLeft]];
     SKAction *keepStrafing = [SKAction repeatActionForever: strafy];
     SKAction *superStrafe = [SKAction sequence:@[strafeLeftOnce, keepStrafing]];
