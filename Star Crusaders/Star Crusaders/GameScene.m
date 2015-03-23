@@ -217,10 +217,18 @@ static const int lazerHitCategory = 2;
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:
 (UIAcceleration *)acceleration{
     
-    //NSLog(@"%f",acceleration.x);
-    
     SKAction *moveNodeX = [SKAction moveByX:(acceleration.x)*100 y:0.0 duration:.1];
-    [self.sprite runAction: moveNodeX];
+
+    NSLog(@"%f",acceleration.x);
+    NSLog(@"%f",self.sprite.position.x);
+    if (acceleration.x > 0  && self.sprite.position.x < 690) {
+        [self.sprite runAction: moveNodeX];
+    }
+    
+    else if (acceleration.x < 0  && self.sprite.position.x > 350) {
+        [self.sprite runAction: moveNodeX];
+    }
+    
 
 
 }
