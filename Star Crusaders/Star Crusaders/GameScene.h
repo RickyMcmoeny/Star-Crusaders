@@ -28,6 +28,8 @@
 
 @property NSMutableArray *enemies;
 
+@property NSMutableArray *shootingEnemies;
+
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 

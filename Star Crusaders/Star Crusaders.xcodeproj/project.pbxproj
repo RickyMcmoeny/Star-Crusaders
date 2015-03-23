@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13B234161AB68E6A001CFE5E /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B234151AB68E6A001CFE5E /* explosion.png */; };
 		13B234AB1AB8996D001CFE5E /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 13B234A01AB8996D001CFE5E /* Contents.json */; };
 		13B234AC1AB8996D001CFE5E /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B234A11AB8996D001CFE5E /* Icon-40.png */; };
 		13B234AD1AB8996D001CFE5E /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B234A21AB8996D001CFE5E /* Icon-40@2x.png */; };
@@ -53,7 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13B234151AB68E6A001CFE5E /* explosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = explosion.png; path = ../../../Desktop/explosion.png; sourceTree = "<group>"; };
 		13B234A01AB8996D001CFE5E /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		13B234A11AB8996D001CFE5E /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		13B234A21AB8996D001CFE5E /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				13B234BB1AB899D7001CFE5E /* Icon.png */,
 				13B234BC1AB899D7001CFE5E /* Icon@2x.png */,
 				13B2349F1AB8996D001CFE5E /* AppIcon.appiconset */,
-				13B234151AB68E6A001CFE5E /* explosion.png */,
 				55564CA71A9BA37500DBB29F /* LaunchScreen.xib */,
 				55564C931A9BA37400DBB29F /* Supporting Files */,
 			);
@@ -312,7 +309,6 @@
 				13B234BE1AB899D7001CFE5E /* Icon-72.png in Resources */,
 				13B234AD1AB8996D001CFE5E /* Icon-40@2x.png in Resources */,
 				13B234BF1AB899D7001CFE5E /* Icon-72@2x.png in Resources */,
-				13B234161AB68E6A001CFE5E /* explosion.png in Resources */,
 				13B234AB1AB8996D001CFE5E /* Contents.json in Resources */,
 				13B234B51AB8996D001CFE5E /* Icon-Small@3x.png in Resources */,
 				13B234C01AB899D7001CFE5E /* Icon-Small-50.png in Resources */,
