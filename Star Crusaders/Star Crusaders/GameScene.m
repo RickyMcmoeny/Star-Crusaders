@@ -90,9 +90,24 @@ static const int PlayerHitCategory = 4;
         }
         
         
+        
     }
     
     [self createShootingEnemy:720 withX:525];
+    
+
+    
+    
+    if (self)
+    {
+        self.physicsWorld.gravity = CGVectorMake(0,0);
+        self.physicsWorld.contactDelegate = self;
+        //self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+    }
+}
+
+
+-(void)enemyShoot: (int) posy withX : (int) posx{
     
     SKSpriteNode *enemyLaze = [SKSpriteNode spriteNodeWithImageNamed:@"lazer"];
     enemyLaze.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(20, 80)];
@@ -106,27 +121,11 @@ static const int PlayerHitCategory = 4;
     SKAction *moveNodeDown = [SKAction moveByX:0.0 y:-250 duration:1];
     SKAction *keepMoving = [SKAction repeatActionForever: moveNodeDown];
     
-    
-    
+    [enemyLaze runAction: keepMoving];
     [self addChild: enemyLaze];
     
-    [enemyLaze runAction: keepMoving];
     
-    
-    
-    
-
-
-    
-    
-    if (self)
-    {
-        self.physicsWorld.gravity = CGVectorMake(0,0);
-        self.physicsWorld.contactDelegate = self;
-        //self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
-    }
 }
-
 
 -(void)createEnemy: (int) posy withX : (int) posx{
     
