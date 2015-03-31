@@ -26,6 +26,8 @@
 
 @property int *timer;
 
+@property int *timer69;
+
 @property NSMutableArray *enemies;
 
 @property NSMutableArray *shootingEnemies;
