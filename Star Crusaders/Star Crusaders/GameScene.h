@@ -31,6 +31,7 @@
 @property NSMutableArray *enemies;
 
 @property NSMutableArray *shootingEnemies;
+@property NSMutableArray *enemyTimers;
 
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
