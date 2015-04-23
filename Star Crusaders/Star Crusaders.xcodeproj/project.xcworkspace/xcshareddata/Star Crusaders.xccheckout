@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>887588A6-3354-43AC-87EB-E39BF3AD81E6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Star Crusaders</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3FD60999C28304A20889462363E2825C520419CE</key>
 		<string>https://github.com/RickyMcmoeny/Star-Crusaders.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Star Crusaders/Star Crusaders.xcodeproj/project.xcworkspace</string>
+	<string>Star Crusaders/Star Crusaders.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3FD60999C28304A20889462363E2825C520419CE</key>

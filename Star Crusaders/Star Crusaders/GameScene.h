@@ -37,4 +37,5 @@
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
 
+
 @end

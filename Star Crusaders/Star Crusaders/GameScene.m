@@ -123,17 +123,19 @@ static const int PlayerHitCategory = 4;
 }
 
 
--(void)enemyShoot: (int) posy withX : (int) posx{
+-(void)enemyShoot: (int) posy withX : (int) posx : (NSString*) name {
     
-    SKSpriteNode *enemyLaze = [SKSpriteNode spriteNodeWithImageNamed:@"lazer"];
+    SKSpriteNode *enemyLaze = [SKSpriteNode spriteNodeWithImageNamed:@"enemyLazer"];
     enemyLaze.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(20, 80)];
     enemyLaze.physicsBody.affectedByGravity = false;
     enemyLaze.physicsBody.categoryBitMask = enemyLazerHitCategory;
     enemyLaze.physicsBody.contactTestBitMask = enemyHitCategory;
     enemyLaze.physicsBody.collisionBitMask =  enemyHitCategory;
+    enemyLaze.xScale = .15;
+    enemyLaze.yScale = .15;
     
     enemyLaze.name = @"Laser";
-    enemyLaze.position = [self childNodeWithName: @"shootingEnemy0"].position;
+    enemyLaze.position = [self childNodeWithName: name].position;
     SKAction *moveNodeDown = [SKAction moveByX:0.0 y:-250 duration:1];
     SKAction *keepMoving = [SKAction repeatActionForever: moveNodeDown];
     
@@ -156,7 +158,7 @@ static const int PlayerHitCategory = 4;
 
     NSLog(name);
     
-    SKSpriteNode *enemy = [SKSpriteNode spriteNodeWithImageNamed:@"enemy1"];
+    SKSpriteNode *enemy = [SKSpriteNode spriteNodeWithImageNamed:@"enemy2"];
 
     enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:80];
     enemy.physicsBody.affectedByGravity = false;
@@ -243,6 +245,8 @@ static const int PlayerHitCategory = 4;
         laze.physicsBody.categoryBitMask = lazerHitCategory;
         laze.physicsBody.contactTestBitMask = enemyHitCategory;
         laze.physicsBody.collisionBitMask =  enemyHitCategory;
+        laze.xScale = .15;
+        laze.yScale = .15;
         
         laze.name = @"Laser";
         
@@ -446,8 +450,41 @@ static const int PlayerHitCategory = 4;
         NSLog(@"enemyshoot");
         //[self createEnemy: 3 withX:5];
         
-        [self enemyShoot:[self childNodeWithName:@"shootingEnemy0"].position.y withX:[self childNodeWithName:@"shootingEnemy0"].position.x];
+        
+        
+        for (int i = 0; i < _enemyNumber; i++) {
+            
+            NSString *name = @"enemy";
+            
+            NSString *idnum = [NSString stringWithFormat:@"%d", i];
+            
+            name = [name stringByAppendingString:idnum];
+            
+            SKAction *fallDown = [SKAction moveByX:0 y:-200 duration:2];
+            
+            SKAction *strafeRight = [SKAction moveByX:100 y:0 duration:4];
+            SKAction *strafeLeft = [SKAction moveByX:-100 y:0 duration:4];
+            SKAction *strafy = [SKAction sequence:@[strafeRight, strafeLeft]];
+            SKAction *keepStrafing = [SKAction repeatActionForever: strafy];
+            //SKAction *superStrafe = [SKAction sequence:@[strafeLeftOnce, keepStrafing]];
+            
+            [[self childNodeWithName:name] runAction:keepStrafing];
+            [[self childNodeWithName:name] runAction:fallDown];
 
+            
+            [self enemyShoot:[self childNodeWithName: name].position.y withX:[self childNodeWithName: name].position.x:name];
+        }
+        
+        for (int i = 0; i < _shootingEnemyNumber; i++) {
+            
+            NSString *name = @"shootingEnemy";
+            
+            NSString *idnum = [NSString stringWithFormat:@"%d", i];
+            
+            name = [name stringByAppendingString:idnum];
+            
+            [self enemyShoot:[self childNodeWithName: name].position.y withX:[self childNodeWithName: name].position.x:name];
+        }
         
         _shootyTimer = 50;
     }
@@ -473,7 +510,6 @@ static const int PlayerHitCategory = 4;
     for (int y = 0; y < (sizeof self.enemyTimers)-1; y++) {  //make enemies attacking move
         if ([self.enemyTimers objectAtIndex:y] <= 0) {
             //trigger ship attack
-            NSLog(@"Enemy Attack");
             NSString *name = [self.enemies objectAtIndex:y];
             //[[self childNodeWithName:name]removeFromParent];
             int firstValue = [[self.enemyTimers objectAtIndex:y] intValue];
