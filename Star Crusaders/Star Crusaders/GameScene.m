@@ -27,9 +27,9 @@
 
 }
 static const int enemyHitCategory = 1;
-static const int enemyLazerHitCategory = 3;
-static const int lazerHitCategory = 2;
-static const int PlayerHitCategory = 4;
+static const int enemyLazerHitCategory = 69;
+static const int lazerHitCategory = 420;
+static const int PlayerHitCategory = 88;
 
 
 
@@ -183,6 +183,7 @@ static const int PlayerHitCategory = 4;
     [self.enemies addObject:spaceyOK];
     int randint = arc4random()%800;
     [self.enemyTimers addObject:[NSNumber numberWithInt:randint]];
+    [self.enemyTriggers addObject:[NSNumber numberWithInt:1]];
 
 } //Implicit conversion of 'int' to 'id' is disallowed with ARC
 
@@ -251,7 +252,7 @@ static const int PlayerHitCategory = 4;
         laze.name = @"Laser";
         
         CGPoint lazerspawn = self.sprite.position;
-        lazerspawn.y = lazerspawn.y + 70;
+        //lazerspawn.y = lazerspawn.y + 70;
         
         //CGPointMake(525, 0);
         
@@ -260,13 +261,6 @@ static const int PlayerHitCategory = 4;
         
         SKAction *moveNodeUp = [SKAction moveByX:0.0 y:250 duration:1];
         SKAction *keepMoving = [SKAction repeatActionForever: moveNodeUp];
-        
-        
-
-
-        
-        //SKAction *oneRevolution = [SKAction rotateByAngle:-M_PI*2 duration: 0.5];
-        //SKAction *keepRotating = [SKAction repeatActionForever: oneRevolution];
         
         
         [self addChild: laze];
@@ -453,26 +447,37 @@ static const int PlayerHitCategory = 4;
         
         
         for (int i = 0; i < _enemyNumber; i++) {
+            if ([self.enemyTriggers objectAtIndex:i] == 1) {
+                
             
-            NSString *name = @"enemy";
+                NSString *name = @"enemy";
             
-            NSString *idnum = [NSString stringWithFormat:@"%d", i];
+                NSString *idnum = [NSString stringWithFormat:@"%d", i];
             
-            name = [name stringByAppendingString:idnum];
+                name = [name stringByAppendingString:idnum];
             
-            SKAction *fallDown = [SKAction moveByX:0 y:-200 duration:2];
+                SKAction *fallDown = [SKAction moveByX:0 y:-100 duration:4];
             
-            SKAction *strafeRight = [SKAction moveByX:100 y:0 duration:4];
-            SKAction *strafeLeft = [SKAction moveByX:-100 y:0 duration:4];
-            SKAction *strafy = [SKAction sequence:@[strafeRight, strafeLeft]];
-            SKAction *keepStrafing = [SKAction repeatActionForever: strafy];
-            //SKAction *superStrafe = [SKAction sequence:@[strafeLeftOnce, keepStrafing]];
+                SKAction *strafeRight = [SKAction moveByX:50 y:0 duration:4];
+                SKAction *strafeLeft = [SKAction moveByX:-50 y:0 duration:4];
+                SKAction *strafy = [SKAction sequence:@[strafeRight, strafeLeft]];
+                SKAction *keepStrafing = [SKAction repeatActionForever: strafy];
+                //SKAction *superStrafe = [SKAction sequence:@[strafeLeftOnce, keepStrafing]];
             
-            [[self childNodeWithName:name] runAction:keepStrafing];
-            [[self childNodeWithName:name] runAction:fallDown];
+                [[self childNodeWithName:name] runAction:keepStrafing];
+                [[self childNodeWithName:name] runAction:fallDown];
 
             
-            [self enemyShoot:[self childNodeWithName: name].position.y withX:[self childNodeWithName: name].position.x:name];
+                [self enemyShoot:[self childNodeWithName: name].position.y withX:[self childNodeWithName: name].position.x:name];
+            }
+            else
+            {
+                int randint = arc4random()%100;
+                
+                if (randint >= 80) {
+                    [self.enemyTriggers replaceObjectAtIndex:i withObject: [NSNumber numberWithInt:1]];
+                }
+            }
         }
         
         for (int i = 0; i < _shootingEnemyNumber; i++) {
@@ -486,7 +491,7 @@ static const int PlayerHitCategory = 4;
             [self enemyShoot:[self childNodeWithName: name].position.y withX:[self childNodeWithName: name].position.x:name];
         }
         
-        _shootyTimer = 50;
+        _shootyTimer = 200;
     }
     else
     {
