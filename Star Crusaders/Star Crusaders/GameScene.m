@@ -89,10 +89,14 @@ static const int PlayerHitCategory = 88;
     _enemyNumber = 0;
     
     
+    /*
+    
     int rows = 6;
     int columns = 8;
     int startY = 450;
     int startX = 350;
+    
+    
     
     for (int y = 0; y < rows; y++) {
         //make row
@@ -111,7 +115,14 @@ static const int PlayerHitCategory = 88;
     [self createShootingEnemy:720 withX:525];
     
     
-
+     */
+    
+    int randomX = arc4random()%420;
+    
+    [self createEnemy:720 withX:300+randomX]; 
+    
+    NSLog(@"%d",randomX);
+    
     
     
     if (self)
@@ -252,7 +263,7 @@ static const int PlayerHitCategory = 88;
         laze.name = @"Laser";
         
         CGPoint lazerspawn = self.sprite.position;
-        //lazerspawn.y = lazerspawn.y + 70;
+        lazerspawn.y = lazerspawn.y + 70;
         
         //CGPointMake(525, 0);
         
