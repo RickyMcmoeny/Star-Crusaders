@@ -20,6 +20,7 @@
     int _enemyNumber;
     int _shootingEnemyNumber;
     int _reloadTimer;
+    int _spawnTimer;
     
     int _shootyTimer;
     bool _loadedLaser;
@@ -38,6 +39,7 @@ static const int PlayerHitCategory = 88;
     /* Setup your scene here */
     
     self.timer69 = 50;
+    _spawnTimer = 3;
     
     //self.motionManager = [[CMMotionManager alloc] init];
     //[self.motionManager startAccelerometerUpdates];
@@ -117,11 +119,11 @@ static const int PlayerHitCategory = 88;
     
      */
     
-    int randomX = arc4random()%420;
     
-    [self createEnemy:720 withX:300+randomX]; 
     
-    NSLog(@"%d",randomX);
+
+
+    
     
     
     
@@ -184,11 +186,38 @@ static const int PlayerHitCategory = 88;
     enemy.yScale = 0.03;
     enemy.zRotation = M_PI/1.0;
     
+    /*
     SKAction *shiftUp = [SKAction moveByX:0.0 y:20 duration:.5];
     SKAction *shiftDown = [SKAction moveByX:0.0 y:-20 duration:.5];
     SKAction *shifty = [SKAction sequence:@[shiftUp, shiftDown]];
     SKAction *keepShifting = [SKAction repeatActionForever: shifty];
-    [enemy runAction:keepShifting];
+    */
+    SKAction *moveDown = [SKAction moveByX:0 y:-10 duration:.1];
+    SKAction *strafeRight = [SKAction moveByX:50 y:0 duration:.3];
+    SKAction *strafeLeft = [SKAction moveByX:-50 y:0 duration:.3];
+    SKAction *keepDown = [SKAction repeatActionForever:moveDown];
+    SKAction *DodgingR = [SKAction sequence:@[strafeRight, strafeLeft]];
+    SKAction *DodgingL = [SKAction sequence:@[strafeLeft, strafeRight]];
+    SKAction *keepDodgingR = [SKAction repeatActionForever: DodgingR];
+    SKAction *keepDodgingL = [SKAction repeatActionForever: DodgingL];
+    //[enemy runAction:keepShifting];
+    [enemy runAction:keepDown];
+    
+
+    if (posx > 680) {
+        SKAction *center = [SKAction moveByX:-50 y:0 duration:1];
+        [enemy runAction:center];
+        [enemy runAction:keepDodgingR];
+    }else if (posx < 350){
+        SKAction *center = [SKAction moveByX:50 y:0 duration:1];
+        [enemy runAction:center];
+        [enemy runAction:keepDodgingL];
+    }else{
+        [enemy runAction:keepDodgingR];
+    }
+
+
+    
     
     [self addChild:enemy];
     [self.enemies addObject:spaceyOK];
@@ -379,6 +408,16 @@ static const int PlayerHitCategory = 88;
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    
+
+    if (_spawnTimer == 0) {
+        NSLog(@"test");
+        int randomX = arc4random()%420;
+        [self createEnemy:720 withX:300+randomX];
+        _spawnTimer = 90;
+    }else{
+        _spawnTimer -=1;
+    }
     
     SKAction *moveNodeUp = [SKAction moveByX:0.0 y:1 duration:0];
     //[self.lazer runAction: moveNodeUp];
