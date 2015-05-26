@@ -34,6 +34,9 @@
 @property NSMutableArray *enemyTimers;
 @property NSMutableArray *enemyTriggers;
 
+@property  UILabel *label;
+
+
 
 
 @property (strong, nonatomic) CMMotionManager *motionManager;

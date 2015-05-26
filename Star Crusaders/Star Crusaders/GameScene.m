@@ -21,6 +21,8 @@
     int _shootingEnemyNumber;
     int _reloadTimer;
     int _spawnTimer;
+    int _score;
+    int _difficulty;
     
     int _shootyTimer;
     bool _loadedLaser;
@@ -38,8 +40,21 @@ static const int PlayerHitCategory = 88;
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
     
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    _score = 0;
+    
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(screenWidth-(screenWidth-5), 520, 300, 50)];
+    self.label.backgroundColor = [UIColor clearColor];
+    self.label.textColor=[UIColor whiteColor];
+    [self.view addSubview:self.label];
+    
+    
     self.timer69 = 50;
     _spawnTimer = 3;
+    _difficulty = 180;
     
     //self.motionManager = [[CMMotionManager alloc] init];
     //[self.motionManager startAccelerometerUpdates];
@@ -73,8 +88,8 @@ static const int PlayerHitCategory = 88;
     self.sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(50, 50)];
     self.sprite.physicsBody.affectedByGravity = false;
     self.sprite.physicsBody.categoryBitMask = PlayerHitCategory;
-    self.sprite.physicsBody.contactTestBitMask = lazerHitCategory;
-    self.sprite.physicsBody.collisionBitMask =  lazerHitCategory;
+    self.sprite.physicsBody.contactTestBitMask = enemyHitCategory;
+    self.sprite.physicsBody.collisionBitMask =  enemyHitCategory;
     
     
     SKAction *shiftUpSlightly = [SKAction moveByX:0.0 y:5 duration:.5];
@@ -173,7 +188,7 @@ static const int PlayerHitCategory = 88;
     
     SKSpriteNode *enemy = [SKSpriteNode spriteNodeWithImageNamed:@"enemy2"];
 
-    enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:80];
+    enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:200];
     enemy.physicsBody.affectedByGravity = false;
     enemy.physicsBody.categoryBitMask = enemyHitCategory;
     enemy.physicsBody.contactTestBitMask = lazerHitCategory;
@@ -182,8 +197,8 @@ static const int PlayerHitCategory = 88;
     CGPoint location2 = CGPointMake(posx,posy);
     enemy.name = name;
     enemy.position = location2;
-    enemy.xScale = 0.03;
-    enemy.yScale = 0.03;
+    enemy.xScale = 0.055;
+    enemy.yScale = 0.055;
     enemy.zRotation = M_PI/1.0;
     
     /*
@@ -281,7 +296,7 @@ static const int PlayerHitCategory = 88;
     
     
         SKSpriteNode *laze = [SKSpriteNode spriteNodeWithImageNamed:@"lazer"];
-        laze.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(20, 80)];
+        laze.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(30, 90)];
         laze.physicsBody.affectedByGravity = false;
         laze.physicsBody.categoryBitMask = lazerHitCategory;
         laze.physicsBody.contactTestBitMask = enemyHitCategory;
@@ -299,7 +314,7 @@ static const int PlayerHitCategory = 88;
         
         laze.position = lazerspawn;
         
-        SKAction *moveNodeUp = [SKAction moveByX:0.0 y:250 duration:1];
+        SKAction *moveNodeUp = [SKAction moveByX:0.0 y:250 duration:.5];
         SKAction *keepMoving = [SKAction repeatActionForever: moveNodeUp];
         
         
@@ -384,6 +399,33 @@ static const int PlayerHitCategory = 88;
         
         
     }
+    
+    if ((firstBody.categoryBitMask == PlayerHitCategory && secondBody.categoryBitMask == enemyHitCategory)||(firstBody.categoryBitMask == enemyHitCategory && secondBody.categoryBitMask == PlayerHitCategory))
+    {
+        NSLog(@"Ping two");
+        
+        SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"explosion.png"];
+        ball.xScale = .2;
+        ball.yScale = .2;
+        ball.name = @"Explosion";
+        ball.position = contact.bodyB.node.position;
+        
+        SKAction *fadeAway = [SKAction fadeOutWithDuration:.5];
+        SKAction *removeNode = [SKAction removeFromParent];
+        SKAction *sequence = [SKAction sequence:@[fadeAway, removeNode]];
+        
+        [ball runAction:sequence];
+        [self addChild:ball];
+        
+        [firstBody.node removeFromParent];
+        [secondBody.node removeFromParent];
+        
+        _reloadTimer = 50000;
+        _loadedLaser = false;
+        //setup your methods and other things here
+        
+        
+    }
 }
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:
@@ -409,12 +451,24 @@ static const int PlayerHitCategory = 88;
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     
+    _score +=1;
+    if (_score == 1800) {
+        _difficulty = 120;
+    }else if (_score == 3600){
+        _difficulty = 60;
+    }
+    
+    self.label.text = [NSString stringWithFormat:@"Score: %d", _score];
+
 
     if (_spawnTimer == 0) {
         NSLog(@"test");
         int randomX = arc4random()%420;
         [self createEnemy:720 withX:300+randomX];
-        _spawnTimer = 90;
+        if (_difficulty == 60) {
+            [self createShootingEnemy:720 withX:525];
+        }
+        _spawnTimer = _difficulty;
     }else{
         _spawnTimer -=1;
     }
