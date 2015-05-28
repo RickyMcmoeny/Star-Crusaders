@@ -41,6 +41,13 @@
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
+@property (weak, nonatomic) id <sceneDelegate> delegate;
 
 
 @end
+
+@protocol sceneDelegate <NSObject>
+-(void)showDifferentView;
+@end
+
+

@@ -51,5 +51,23 @@
             </objects>
             <point key="canvasLocation" x="218" y="264"/>
         </scene>
+        <!--deathScreen-->
+        <scene sceneID="1bQ-c4-Nho">
+            <objects>
+                <viewController storyboardIdentifier="deathScreen" title="deathScreen" id="IDE-Cf-o3p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FA7-O6-lrO"/>
+                        <viewControllerLayoutGuide type="bottom" id="twg-BZ-3F4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SbF-nL-ByK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCa-vu-gge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965" y="272"/>
+        </scene>
     </scenes>
 </document>

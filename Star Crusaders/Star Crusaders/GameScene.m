@@ -23,9 +23,11 @@
     int _spawnTimer;
     int _score;
     int _difficulty;
+    int _shootyspawntimer;
     
     int _shootyTimer;
     bool _loadedLaser;
+    bool _dead;
     
 
 }
@@ -395,6 +397,9 @@ static const int PlayerHitCategory = 88;
         
         _reloadTimer = 50000;
         _loadedLaser = false;
+        _dead = true;
+        
+        
         //setup your methods and other things here
         
         
@@ -422,6 +427,8 @@ static const int PlayerHitCategory = 88;
         
         _reloadTimer = 50000;
         _loadedLaser = false;
+        _dead = true;
+        
         //setup your methods and other things here
         
         
@@ -451,7 +458,9 @@ static const int PlayerHitCategory = 88;
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     
-    _score +=1;
+    if (_dead == false) {
+        _score +=1;
+    }
     if (_score == 1800) {
         _difficulty = 120;
     }else if (_score == 3600){
@@ -462,16 +471,20 @@ static const int PlayerHitCategory = 88;
 
 
     if (_spawnTimer == 0) {
-        NSLog(@"test");
         int randomX = arc4random()%420;
         [self createEnemy:720 withX:300+randomX];
-        if (_difficulty == 60) {
-            [self createShootingEnemy:720 withX:525];
-        }
         _spawnTimer = _difficulty;
     }else{
         _spawnTimer -=1;
     }
+    
+    if (_difficulty >= 60 && _shootyspawntimer == 0) {
+        [self createShootingEnemy:720 withX:525];
+        _shootyspawntimer = 300;
+    }else{
+        _shootyspawntimer -=1;
+    }
+    
     
     SKAction *moveNodeUp = [SKAction moveByX:0.0 y:1 duration:0];
     //[self.lazer runAction: moveNodeUp];
