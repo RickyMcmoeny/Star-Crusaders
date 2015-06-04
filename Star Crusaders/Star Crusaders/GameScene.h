@@ -41,7 +41,7 @@
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
-@property (weak, nonatomic) id <sceneDelegate> delegate;
+@property (weak, nonatomic) id <SKSceneDelegate> delegate;
 
 
 @end

@@ -39,6 +39,7 @@
 		55564CA61A9BA37500DBB29F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55564CA51A9BA37500DBB29F /* Images.xcassets */; };
 		55564CA91A9BA37500DBB29F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55564CA71A9BA37500DBB29F /* LaunchScreen.xib */; };
 		55564CB51A9BA37500DBB29F /* Star_CrusadersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55564CB41A9BA37500DBB29F /* Star_CrusadersTests.m */; };
+		559538031B20CEAC00A4EF83 /* menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 559538021B20CEAC00A4EF83 /* menu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		55564CAE1A9BA37500DBB29F /* Star CrusadersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Star CrusadersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55564CB31A9BA37500DBB29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55564CB41A9BA37500DBB29F /* Star_CrusadersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Star_CrusadersTests.m; sourceTree = "<group>"; };
+		559538011B20CE9200A4EF83 /* menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = menu.h; sourceTree = "<group>"; };
+		559538021B20CEAC00A4EF83 /* menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = menu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				55564CA01A9BA37500DBB29F /* GameViewController.m */,
 				55564C9A1A9BA37400DBB29F /* GameScene.h */,
 				55564C9B1A9BA37500DBB29F /* GameScene.m */,
+				559538011B20CE9200A4EF83 /* menu.h */,
+				559538021B20CEAC00A4EF83 /* menu.m */,
 				55564CA21A9BA37500DBB29F /* Main.storyboard */,
 				55564CA51A9BA37500DBB29F /* Images.xcassets */,
 				13B234C81AB89F9D001CFE5E /* loading_screen.png */,
@@ -335,6 +340,7 @@
 				55564CA11A9BA37500DBB29F /* GameViewController.m in Sources */,
 				55564C991A9BA37400DBB29F /* AppDelegate.m in Sources */,
 				55564C9C1A9BA37500DBB29F /* GameScene.m in Sources */,
+				559538031B20CEAC00A4EF83 /* menu.m in Sources */,
 				5512F24E1AA0E9AC00DFA391 /* enemy.m in Sources */,
 				55564C961A9BA37400DBB29F /* main.m in Sources */,
 			);

@@ -460,7 +460,10 @@ static const int PlayerHitCategory = 88;
     
     if (_dead == false) {
         _score +=1;
+    }else{
+        [self.label setFrame:CGRectMake(130,180,150,250)];
     }
+    
     if (_score == 1800) {
         _difficulty = 120;
     }else if (_score == 3600){
