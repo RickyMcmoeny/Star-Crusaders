@@ -156,7 +156,7 @@ static const int PlayerHitCategory = 88;
 -(void)enemyShoot: (int) posy withX : (int) posx : (NSString*) name {
     
     SKSpriteNode *enemyLaze = [SKSpriteNode spriteNodeWithImageNamed:@"enemyLazer"];
-    enemyLaze.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(20, 80)];
+    enemyLaze.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(15, 70)];
     enemyLaze.physicsBody.affectedByGravity = false;
     enemyLaze.physicsBody.categoryBitMask = enemyLazerHitCategory;
     enemyLaze.physicsBody.contactTestBitMask = enemyHitCategory;
@@ -260,7 +260,7 @@ static const int PlayerHitCategory = 88;
     
     SKSpriteNode *enemy = [SKSpriteNode spriteNodeWithImageNamed:@"enemy1"];
     
-    enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:80];
+    enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:120];
     enemy.physicsBody.affectedByGravity = false;
     enemy.physicsBody.categoryBitMask = enemyHitCategory;
     enemy.physicsBody.contactTestBitMask = lazerHitCategory;
@@ -269,8 +269,8 @@ static const int PlayerHitCategory = 88;
     CGPoint location2 = CGPointMake(posx,posy);
     enemy.name = name;
     enemy.position = location2;
-    enemy.xScale = 0.03;
-    enemy.yScale = 0.03;
+    enemy.xScale = 0.035;
+    enemy.yScale = 0.035;
     enemy.zRotation = M_PI/1.0;
     
     SKAction *strafeLeftOnce = [SKAction moveByX:-252.5 y:0 duration:2];
