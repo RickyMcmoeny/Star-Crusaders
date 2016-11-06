@@ -348,7 +348,7 @@ static const int PlayerHitCategory = 88;
     
     if(firstBody.categoryBitMask == lazerHitCategory || secondBody.categoryBitMask == lazerHitCategory)
     {
-        
+        //new
         
         NSLog(@"ping one");
 
