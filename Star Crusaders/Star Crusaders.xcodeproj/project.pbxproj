@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		139904CA1B20E99500F3E1DC /* 4T9od4dqc.png in Resources */ = {isa = PBXBuildFile; fileRef = 139904C91B20E99500F3E1DC /* 4T9od4dqc.png */; };
 		13B234AB1AB8996D001CFE5E /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 13B234A01AB8996D001CFE5E /* Contents.json */; };
 		13B234AC1AB8996D001CFE5E /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B234A11AB8996D001CFE5E /* Icon-40.png */; };
 		13B234AD1AB8996D001CFE5E /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B234A21AB8996D001CFE5E /* Icon-40@2x.png */; };
@@ -53,7 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		139904C91B20E99500F3E1DC /* 4T9od4dqc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4T9od4dqc.png; path = ../../../Desktop/4T9od4dqc.png; sourceTree = "<group>"; };
 		13B234A01AB8996D001CFE5E /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		13B234A11AB8996D001CFE5E /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		13B234A21AB8996D001CFE5E /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				13B234C51AB899EA001CFE5E /* iTunesArtwork@2x.png */,
 				13B234B61AB899D7001CFE5E /* Icon-60.png */,
 				13B234B71AB899D7001CFE5E /* Icon-72.png */,
-				139904C91B20E99500F3E1DC /* 4T9od4dqc.png */,
 				13B234B81AB899D7001CFE5E /* Icon-72@2x.png */,
 				13B234B91AB899D7001CFE5E /* Icon-Small-50.png */,
 				13B234BA1AB899D7001CFE5E /* Icon-Small-50@2x.png */,
@@ -292,7 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				139904CA1B20E99500F3E1DC /* 4T9od4dqc.png in Resources */,
 				55564CA91A9BA37500DBB29F /* LaunchScreen.xib in Resources */,
 				13B234AF1AB8996D001CFE5E /* Icon-60@2x.png in Resources */,
 				55564CA61A9BA37500DBB29F /* Images.xcassets in Resources */,
